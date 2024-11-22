@@ -27,6 +27,6 @@ public class Exercicio05 {
       total = 1.5 * amount;
     }
 
-    System.out.printf("Total: R$ %.2f", total);
+    System.out.printf("Total: R$ %.2f\n", total);
   }
 }

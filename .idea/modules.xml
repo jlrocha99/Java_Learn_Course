@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/04-EstruturaSequencial/04-EstruturaSequencial.iml" filepath="$PROJECT_DIR$/04-EstruturaSequencial/04-EstruturaSequencial.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-EstruturaCondicional/05-EstruturaCondicional.iml" filepath="$PROJECT_DIR$/05-EstruturaCondicional/05-EstruturaCondicional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-EstruturasRepetitivas/06-EstruturasRepetitivas.iml" filepath="$PROJECT_DIR$/06-EstruturasRepetitivas/06-EstruturasRepetitivas.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_Learn_Course.iml" filepath="$PROJECT_DIR$/.idea/Java_Learn_Course.iml" />
     </modules>
   </component>
