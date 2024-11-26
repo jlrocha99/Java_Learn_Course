@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/05-EstruturaCondicional/05-EstruturaCondicional.iml" filepath="$PROJECT_DIR$/05-EstruturaCondicional/05-EstruturaCondicional.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-EstruturasRepetitivas/06-EstruturasRepetitivas.iml" filepath="$PROJECT_DIR$/06-EstruturasRepetitivas/06-EstruturasRepetitivas.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-TopicosExtra-String-Func/07-TopicosExtra-String-Func.iml" filepath="$PROJECT_DIR$/07-TopicosExtra-String-Func/07-TopicosExtra-String-Func.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-Introducao-POO/08-Introducao-POO.iml" filepath="$PROJECT_DIR$/08-Introducao-POO/08-Introducao-POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_Learn_Course.iml" filepath="$PROJECT_DIR$/.idea/Java_Learn_Course.iml" />
     </modules>
   </component>
