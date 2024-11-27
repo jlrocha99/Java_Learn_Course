@@ -26,11 +26,8 @@ public class Program {
       y.b = input.nextDouble();
       y.c = input.nextDouble();
 
-      perimeterX = (x.a + x.b + x.c) / 2;
-      perimeterY = (y.a + y.b + y.c) / 2;
-
-      areaX = Math.sqrt(perimeterX * (perimeterX - x.a) * (perimeterX - x.b) * (perimeterX - x.c));
-      areaY = Math.sqrt(perimeterY * (perimeterY - y.a) * (perimeterY - y.b) * (perimeterY - y.c));
+      areaX = x.area();
+      areaY = y.area();
 
       System.out.printf("Triangle X area: %.4f\n", areaX);
       System.out.printf("Triangle Y area: %.4f\n", areaY);
