@@ -3,13 +3,25 @@ package entities;
 public class Account {
   private String holder;
   private int accountNumber;
-  public double balance;
+  private double balance;
 
-  public Account(String holder, int accountNumber) {
-    this.holder = holder;
+  //Constructors
+  public Account(int accountNumber, String holder) {
     this.accountNumber = accountNumber;
+    this.holder = holder;
   }
+
+  public Account(int accountNumber, String holder, double initialDeposit) {
+    this.accountNumber = accountNumber;
+    this.holder = holder;
+    bankDeposit(initialDeposit);
+  }
+
   //get-set
+  public int getAccountNumber() {
+    return accountNumber;
+  }
+
   public void setHolder(String holder) {
     this.holder = holder;
   }
@@ -17,13 +29,11 @@ public class Account {
     return holder;
   }
 
-  public void setAccountNumber(int accountNumber) {
-    this.accountNumber = accountNumber;
-  }
-  public int getAccountNumber() {
-    return accountNumber;
+  public double getBalance() {
+    return balance;
   }
 
+  //Class Methods
   public void bankDeposit(double value) {
     balance += value;
   }
@@ -37,5 +47,4 @@ public class Account {
             + String.format("%.2f", balance)
         );
   }
-
 }
