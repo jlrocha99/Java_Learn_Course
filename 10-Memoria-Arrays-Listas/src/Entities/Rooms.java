@@ -29,7 +29,7 @@ public class Rooms {
 
   public String toString() {
     return(
-        roomNumber + ":" + name + ", " + email
+        roomNumber + ": " + name + ", " + email
         );
   }
 
