@@ -5,10 +5,27 @@ public class Employee {
   private int id;
   private double salary;
 
-  public   Employee(int id, String name, double salary) {
+  public Employee(int id, String name, double salary) {
     this.name = name;
     this.id = id;
     this.salary = salary;
+  }
+
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public double getSalary() {
@@ -19,22 +36,14 @@ public class Employee {
     this.salary = salary;
   }
 
-  public int getId() {
-    return id;
-  }
 
   public void increaseSalary(double percentage) {
     salary = salary + (salary * (percentage/100));
   }
 
-
-  public String getName() {
-    return name;
-  }
-
   public String toString() {
     return(
-        id + ", " + name + ", " + salary
+        id + ", " + name + ", " + String.format("%.2f", salary)
         );
   }
 
