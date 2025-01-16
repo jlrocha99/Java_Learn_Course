@@ -1,89 +1,48 @@
 package application;
 
 import entities.Department;
-import entities.HourContract;
+import entities.Worker;
 import entities.enums.WorkerLevel;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class ProgramWorker {
-  private String name;
-  private WorkerLevel workerLevel;
-  private Double salary;
+  public static void main(String[] args) throws ParseException {
+    Locale.setDefault(Locale.US);
+    Scanner input = new Scanner(System.in);
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-  //Compositions
-  private Department department;
-  private List<HourContract> contracts = new ArrayList<>();
+    System.out.print("Enter departament's name: ");
+    String departmentName = input.nextLine();
 
-  public ProgramWorker(String name, WorkerLevel workerLevel, Double salary, Department department) {
-    this.name = name;
-    this.workerLevel = workerLevel;
-    this.salary = salary;
-    this.department = department;
+    System.out.println("Enter worker data: ");
+    System.out.print("Name: ");
+    String workerName = input.nextLine();
+    System.out.print("Level: ");
+    String workerLevel = input.nextLine();
+    System.out.print("Base salary: ");
+    Double baseSalary = input.nextDouble();
+
+    Department department = new Department(departmentName);
+
+    Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, department);
+
+    System.out.print("How many contracts to this worker? ");
+    int numberContracts = input.nextInt();
+
+    for (int i = 1; i <= numberContracts; i++) {
+      System.out.println("Enter contract #" + i + "data: ");
+      System.out.print("Date (DD/MM/YYYY): ");
+      Date contractDate = sdf.parse(input.next());
+
+    }
+
+
+
+
   }
-
-  public String getName() {
-    return name;
-  }
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public WorkerLevel getWorkerLevel() {
-    return workerLevel;
-  }
-  public void setWorkerLevel(WorkerLevel workerLevel) {
-    this.workerLevel = workerLevel;
-  }
-
-  public Double getSalary() {
-    return salary;
-  }
-  public void setSalary(Double salary) {
-    this.salary = salary;
-  }
-
-  public Department getDepartment() {
-    return department;
-  }
-  public void setDepartment(Department department) {
-    this.department = department;
-  }
-
-  public List<HourContract> getContracts() {
-    return contracts;
-  }
-
-  //Não posso permitir que minha lista seja trocada por outra (método setContracts faz isso),
-  //O método setContracts faz com que eu atribua uma nova lista a minha lista de contatos, ou seja causando uma troca de listas e não uma inserção ou deleção
-  //setContracts simplesmente recebe outra lista, ou seja substituindo-a coisa que não desejo
-  public void setContracts(List<HourContract> contracts) {
-    this.contracts = contracts;
-  }
-
-  //Inserções e deleções na lista Contracts serão feita pelos métodos abaixo;
-  public void addContract(HourContract contract) {
-    contracts.add(contract);
-  }
-  public void removeContract(HourContract contract) {
-    contracts.remove(contract);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
