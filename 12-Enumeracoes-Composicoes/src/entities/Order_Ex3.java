@@ -14,12 +14,14 @@ public class Order_Ex3 {
   private List<OrderItem_Ex3> items = new ArrayList<>();
   private Client_Ex3 client;
 
+  //Constructor
   public Order_Ex3(Date moment, OrderStatus_Ex3 status, Client_Ex3 client) {
     this.moment = moment;
     this.status = status;
     this.client = client;
   }
 
+  //Getters and Setters
   public Date getMoment() {
     return moment;
   }
@@ -54,4 +56,23 @@ public class Order_Ex3 {
   public void removeItem(OrderItem_Ex3 item) {
     items.remove(item);
   }
+
+  public Double total() {
+    double sum = 0;
+    for (OrderItem_Ex3 item : items) {
+      sum += item.subTotal();
+    }
+    return sum;
+  }
+
+  public String toStrig() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Order Moment: ");
+  }
+
+
+
+
+
+
 }

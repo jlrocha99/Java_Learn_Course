@@ -4,6 +4,7 @@ public class OrderItem_Ex3 {
   private Integer quantity;
   private Double price;
 
+  //Composition
   private Product_Ex3 product;
   //Constructor
   public OrderItem_Ex3(Integer quantity, Double price, Product_Ex3 product) {
