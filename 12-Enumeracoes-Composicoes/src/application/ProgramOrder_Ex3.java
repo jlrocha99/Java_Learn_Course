@@ -26,6 +26,7 @@ public class ProgramOrder_Ex3 {
     System.out.print("Birth date (DD/MM/YYYY): ");
     Date birthDate = sdf.parse(input.next());
 
+    //Instantiating an object
     Client_Ex3 client = new Client_Ex3(name, email, birthDate);
 
     System.out.println("Enter Order Data: ");
@@ -40,6 +41,7 @@ public class ProgramOrder_Ex3 {
     for (int i = 1; i <= numberOrder; i++) {
       System.out.println("Enter #" + i + " item data: ");
       System.out.print("Product name: ");
+      input.nextLine();
       String productName = input.nextLine();
       System.out.print("Product price: ");
       double productPrice = input.nextDouble();
@@ -55,20 +57,10 @@ public class ProgramOrder_Ex3 {
 
     }
 
+    
     System.out.println();
-    System.out.println("ORDER SUM,ARY: ");
+    System.out.println("ORDER SUMMARY: ");
     System.out.println(order);
-
-
-
-
-
-
-
-
-
-
-
 
   }
 }

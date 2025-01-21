@@ -2,11 +2,13 @@ package entities;
 
 import entities.enums.OrderStatus_Ex3;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Order_Ex3 {
+  private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
   private Date moment;
   private OrderStatus_Ex3 status;
 
@@ -65,9 +67,22 @@ public class Order_Ex3 {
     return sum;
   }
 
-  public String toStrig() {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("Order Moment: ");
+    sb.append(sdf.format(moment) + "\n");
+    sb.append("Order Status: ");
+    sb.append(status + "\n");
+    sb.append("Client: ");
+    sb.append(client + "\n");
+    sb.append("Order Items: " + "\n");
+    for (OrderItem_Ex3 item : items) {
+      sb.append(item + "\n");
+    }
+    sb.append("Total price: $");
+    sb.append(String.format("%.2f", total()));
+
+    return sb.toString();
   }
 
 
