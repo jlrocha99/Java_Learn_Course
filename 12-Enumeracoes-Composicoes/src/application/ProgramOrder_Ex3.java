@@ -57,7 +57,7 @@ public class ProgramOrder_Ex3 {
 
     }
 
-    
+
     System.out.println();
     System.out.println("ORDER SUMMARY: ");
     System.out.println(order);
