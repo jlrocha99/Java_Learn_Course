@@ -22,4 +22,9 @@ public class SavingsAccount extends Account{
     balance += balance * interestRate;
   }
 
+  @Override //Sobreposicao de metodos
+  public final void withDraw(double amount) { //Final utilizado para que futuras Subclasses de SavingsAccount nao possam sobrepor esse metodos ao herda-lo, evitando inconsistencias futuras
+      balance -= amount;
+  }
+
 }

@@ -32,7 +32,7 @@ public class Account {
     return balance;
   }
   public void withDraw(double amount) {
-    balance -= amount;
+    balance -= amount + 5.0;
   }
   public void deposit(double amount) {
     balance += amount;
