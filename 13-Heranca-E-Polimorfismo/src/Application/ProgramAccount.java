@@ -10,20 +10,18 @@ public class ProgramAccount {
   public static void main(String[] args) {
     Locale.setDefault(Locale.US);
 
-    Account acc1 = new Account(1001, "Alex", 1000.0);
-    acc1.withDraw(200.0);
-    System.out.println("Metodo withdraw padrao da classe Accout: ");
-    System.out.println(acc1.getBalance());
+    Account x = new Account(1020, "Alex", 1000.0);
+    Account y = new SavingsAccount(1023, "Maria", 1000.0, 0.01);
 
-    Account acc2 = new SavingsAccount(1002, "Maria", 1000.0, 0.01); //UPCASTING
-    acc2.withDraw(200.0);
-    System.out.println("Upcasting + Sobreposicao do metodo withDraw");
-    System.out.println(acc2.getBalance());  //Sobreposicao deu certo!
+    x.withDraw(50);
+    y.withDraw(50);
 
-    Account acc3 = new BusinessAccount(1003, "Bob", 1000.0, 500.0); //UPCASTING
-    acc3.withDraw(200.0);
-    System.out.println("Upcasting + Sobreposicao do metodo withDraw + Super");
-    System.out.println(acc3.getBalance());  //Sobreposicao + Super aproveitando a logica da classe Account
+    System.out.println("Account x instanciada com Account");
+    System.out.println(x.getBalance());
+    System.out.println();
+    System.out.println("Account y instanciada com SavingsAccount");
+    System.out.println(y.getBalance());
+
 
   }
 }
