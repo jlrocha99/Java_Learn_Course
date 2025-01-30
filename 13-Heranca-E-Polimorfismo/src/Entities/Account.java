@@ -1,7 +1,7 @@
 package Entities;
 
 //SuperClass Account
-public class Account {
+public abstract class Account {
   protected Integer number;
   protected String holder;
   protected Double balance;
