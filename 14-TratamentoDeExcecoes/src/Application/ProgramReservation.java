@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-//Very bad Exception Solution (Logica de validacao feita no programa principal) (it works!)
+//Bad Exception solution -> Delegamos a logica de validacao para a classe correta, classe Reservation
 public class ProgramReservation {
   public static void main(String[] args) throws ParseException {
     Scanner input = new Scanner(System.in);
@@ -30,6 +30,7 @@ public class ProgramReservation {
 
       System.out.println();
       System.out.println();
+
       //Update Reservation
       System.out.println("Enter data to update the reservation");
       System.out.print("Check-in date (dd/MM/yyyy): ");
@@ -37,19 +38,11 @@ public class ProgramReservation {
       System.out.print("Check-out date (dd/MM/yyyy): ");
       checkOut = sdf.parse(input.next());
 
-      //Validacao de algumas condicoes de entrada de datas na atualizacao
-      Date now = new Date();
-      //Alteracoes de reserva so podem acontecer em datas futuras
-      if (checkIn.before(now) || checkOut.before(now)) {
-        System.out.println("Error in reservation: Reservation dates for update must be future dates");
+      String error = reservation.updateDates(checkIn, checkOut);
+      if (error != null) {
+        System.out.println("Error in reservation: " + error);
       }
-      //Data de saida deve ser maior que a data de entrada
-      else if (!checkOut.after(checkIn)) {
-        System.out.println("Error in reservation: Check-out date must be after check-in date");
-      }
-      //todas as condicoes de atualizacao de reservas foram aceitas, reserva pode ser atualizada!
       else {
-        reservation.updateDates(checkIn, checkOut);
         System.out.println("Reservation: " + reservation);
       }
     }
