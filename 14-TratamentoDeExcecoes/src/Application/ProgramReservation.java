@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-//Very bad Exception Solution (it works!)
+//Very bad Exception Solution (Logica de validacao feita no programa principal) (it works!)
 public class ProgramReservation {
   public static void main(String[] args) throws ParseException {
     Scanner input = new Scanner(System.in);
