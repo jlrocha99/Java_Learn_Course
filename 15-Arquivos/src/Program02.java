@@ -11,8 +11,8 @@ public class Program02 {
     BufferedReader br = null;
 
     try {
-      fr = new FileReader(path);
-      br = new BufferedReader(fr);
+      fr = new FileReader(path); //instancio e passo  o caminho
+      br = new BufferedReader(fr);  //otimizo a leitura do fr com o BufferedReader;
 
       String line = br.readLine();
 
