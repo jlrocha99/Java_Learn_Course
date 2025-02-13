@@ -1,4 +1,5 @@
-import java.io.BufferedReader;
+package application;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
